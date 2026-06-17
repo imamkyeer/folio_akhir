@@ -1,0 +1,320 @@
+/**
+* Template Name: Folio - Dark Luxury Theme (Complete updated)
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --heading-font: "Playfair Display", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+  
+  /* Tema Utama */
+  --background-color: #0d0d0d;   /* Hitam Pekat */
+  --surface-color: #1a1a1a;      /* Hitam Elemen/Card */
+  --default-color: #b3b3b3;      /* Abu-abu Terang Teks */
+  --heading-color: #ffffff;      /* Putih Judul */
+  --accent-color: #b187ab;       /* Cokelat Ungu Terang (Aksen) */
+  --accent-hover: #cb9ec5;       /* Efek Hover Ungu */
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Navigation & Header
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation & Header
+--------------------------------------------------------------*/
+.header {
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  z-index: 997;
+  border-bottom: 1px solid rgba(177, 135, 171, 0.2);
+}
+
+/* Mengatur logo HSI di header agar ukurannya pas dan proporsional */
+.header .header-logo {
+  max-height: 35px; /* Menyesuaikan tinggi logo dengan tinggi teks */
+  width: auto;
+  object-fit: contain;
+}
+
+.header .logo h1 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.navmenu a {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--nav-font);
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.navmenu a:hover, .navmenu .active {
+  color: var(--accent-color) !important;
+  background-color: rgba(177, 135, 171, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Hero Section (Home - Biodata Santri)
+--------------------------------------------------------------*/
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+}
+
+.hero .logo-school {
+  filter: drop-shadow(0px 4px 10px rgba(255, 255, 255, 0.2));
+}
+
+.hero .title {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--heading-color);
+}
+
+.hero .subtitle {
+  font-size: 18px;
+  font-family: var(--nav-font);
+  color: var(--accent-color);
+}
+
+.hero-bio-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-photo-frame {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  padding: 10px;
+  background: var(--surface-color);
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0px 8px 25px rgba(177, 135, 171, 0.3);
+  overflow: hidden;
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hero .social-links a {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.hero .social-links a:hover {
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# About Section - Gaya Bingkai dan Bayangan Foto (BARU)
+--------------------------------------------------------------*/
+.about {
+  background-color: var(--background-color);
+}
+
+/* Bingkai luar foto di bagian about */
+.custom-photo-frame {
+  position: relative;
+  width: 420px; 
+  height: 620px; 
+  padding: 15px; /* Jarak bingkai ke foto */
+  background: var(--accent-color); /* Warna bingkai mengikuti warna aksen */
+  border-radius: 20px; /* Sudut melengkung halus */
+  
+  /* Efek bayangan pop-out gelap lembut */
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.6); 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pengaturan gambar di dalam bingkai about */
+.custom-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px; /* Membuat sudut foto ikut melengkung di dalam bingkai */
+}
+
+/* Efek interaktif saat kursor mouse menyentuh foto */
+.custom-photo-frame:hover {
+  transform: scale(1.04); /* Sedikit membesar */
+  box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.8); /* Bayangan menjadi lebih tebal/dalam */
+}
+
+.about ul i {
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Section
+--------------------------------------------------------------*/
+.portfolio {
+  background-color: #121212 !important; 
+}
+
+.portfolio .card {
+  background-color: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  transition: 0.3s ease;
+}
+
+.portfolio .card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(177, 135, 171, 0.4) !important;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio .badge {
+  background-color: rgba(177, 135, 171, 0.2) !important;
+  color: var(--accent-color);
+  border: 1px solid rgba(177, 135, 171, 0.4);
+}
+
+/*--------------------------------------------------------------
+# Contact Section & Form Feedback (Putih Bersih)
+--------------------------------------------------------------*/
+.contact {
+  background-color: var(--background-color);
+}
+
+.contact .info-item {
+  background-color: var(--surface-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact .info-item i {
+  color: var(--accent-color) !important;
+}
+
+/* Container Form Kontak Putih */
+.custom-form-white {
+  background-color: #ffffff !important; 
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); 
+}
+
+/* Kotak Isian Formulir Putih Bersih */
+.custom-form-white .custom-input {
+  background-color: #ffffff !important; 
+  border: 1px solid #ced4da !important;
+  color: #212529 !important; /* Teks ketikan hitam agar terbaca jelas */
+}
+
+.custom-form-white .custom-input:focus {
+  background-color: #ffffff !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 8px rgba(177, 135, 171, 0.4) !important;
+  color: #212529 !important;
+}
+
+.custom-form-white .custom-input::placeholder {
+  color: #6c757d !important; /* Warna teks panduan abu-abu kontras */
+}
+
+/* Tombol Kirim */
+.custom-form-white .btn-dark {
+  background-color: #1a1a1a !important;
+  transition: 0.3s ease;
+}
+
+.custom-form-white .btn-dark:hover {
+  background-color: var(--accent-color) !important;
+  color: #000000 !important;
+}
+
+/*--------------------------------------------------------------
+# Buttons & Utilities (Umum)
+--------------------------------------------------------------*/
+.btn-custom {
+  background-color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+# Footer & Scroll Top
+--------------------------------------------------------------*/
+.footer {
+  background-color: #050505 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scroll-top {
+  position: fixed;
+  visibility: visible;
+  opacity: 0.6;
+  right: 15px;
+  bottom: 15px;
+  z-index: 999;
+  background-color: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #000000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.scroll-top:hover {
+  opacity: 1;
+  background-color: var(--accent-hover);
+  color: #000000;
+}

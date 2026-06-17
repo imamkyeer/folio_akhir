@@ -1,0 +1,20 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../OneDrive/Dokumen/Folio (1)/Folio/assets/css"
+	},
+	{
+		"path": "../OneDrive/Dokumen/Folio (1)/Folio/forms"
+	},
+	{
+		"path": "../OneDrive/Dokumen/Folio (1)/Folio"
+	}
+],
+  "settings": {
+    "liveServer.settings.port": 5501,
+    "liveServer.settings.multiRootWorkspaceName": "fotopolio"
+  }
+}
